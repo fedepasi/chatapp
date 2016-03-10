@@ -1,4 +1,5 @@
-var io = require('socket.io')(3000);
+var port = process.env.PORT || 3000;
+var io = require('socket.io')(port);
 io.on('connection', function(socket){
 
 	socket.on('join:room', function(data){
